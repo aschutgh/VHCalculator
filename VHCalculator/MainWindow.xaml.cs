@@ -33,6 +33,9 @@ namespace VHCalculator
             if (rdbAftrekken.IsChecked == true) lblResultaat.Content = $"{eg} - {tg} = {eg - tg}";
             if (rdbVermenigvuldigen.IsChecked == true) lblResultaat.Content = $"{eg} * {tg} = {eg * tg}";
             if (rdbDelen.IsChecked == true) lblResultaat.Content = $"{eg} / {tg} = {eg / tg}";
+            ListBoxItem result = new ListBoxItem();
+            result.Content = lblResultaat.Content;
+            LBoxGeschiedenis.Items.Add(result.Content);
         }
     }
 }
