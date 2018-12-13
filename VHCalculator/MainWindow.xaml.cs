@@ -29,7 +29,10 @@ namespace VHCalculator
         {
             int eg = int.Parse(tboxEersteGetal.Text);
             int tg = int.Parse(tboxTweedeGetal.Text);
-            lblResultaat.Content = $"{eg} + {tg} = {eg + tg}"; // $syntax is lekker compact
+            if (rdbOptellen.IsChecked == true) lblResultaat.Content = $"{eg} + {tg} = {eg + tg}";
+            if (rdbAftrekken.IsChecked == true) lblResultaat.Content = $"{eg} - {tg} = {eg - tg}";
+            if (rdbVermenigvuldigen.IsChecked == true) lblResultaat.Content = $"{eg} * {tg} = {eg * tg}";
+            if (rdbDelen.IsChecked == true) lblResultaat.Content = $"{eg} / {tg} = {eg / tg}";
         }
     }
 }
