@@ -28,8 +28,8 @@ namespace VHCalculator
         private void BtnBereken_Click(object sender, RoutedEventArgs e)
         {
             int eg = int.Parse(tboxEersteGetal.Text);
-            int tw = int.Parse(tboxTweedeGetal.Text);
-            lblResultaat.Content = eg.ToString() + " + " + tw.ToString() + " = " + (eg + tw).ToString();
+            int tg = int.Parse(tboxTweedeGetal.Text);
+            lblResultaat.Content = $"{eg} + {tg} = {eg + tg}"; // $syntax is lekker compact
         }
     }
 }
